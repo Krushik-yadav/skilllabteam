@@ -1084,7 +1084,6 @@
 =======
   <meta name="theme-color" content="#10142b" />
   <title>Team Nova — Team Portfolio</title>
->>>>>>> 0e8eff0e186aa90700ce3e3b85a71cf702976d96
 </head>
 
 <body>
@@ -1685,64 +1684,17 @@
     </div>
 
   </footer>
-<<<<<<< HEAD
-
-
-  <!-- =========================
-       JAVASCRIPT
-  ========================== -->
-
   <script>
-
-    /* Current year */
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-
-    /* Scroll reveal */
-
-    const revealObserver =
-      new IntersectionObserver(
-
-        (entries) => {
-
-          entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-              entry.target.classList.add("visible");
-
-              revealObserver.unobserve(entry.target);
-
-            }
-
-          });
-
-        },
-
-        {
-          threshold: 0.12
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
         }
-
-      );
-
-
-    document
-      .querySelectorAll(".reveal")
-      .forEach((element) => {
-
-        revealObserver.observe(element);
-
       });
-
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
   </script>
-
-=======
-  
-
-
-  <script src="script.js"></script>
->>>>>>> f68f8844822fef604fc92efb8524f3a1f5cc310b
 </body>
 </html>
