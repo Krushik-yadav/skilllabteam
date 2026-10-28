@@ -125,17 +125,9 @@
   <footer class="container">
     <div class="footer-inner"><span>© <span id="year"></span> Team Nova. Made together.</span><span>Built with curiosity ✦ and a gradient or two.</span></div>
   </footer>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
-  </script>
+  
+
+
+  <script src="script.js"></script>
 </body>
 </html>
